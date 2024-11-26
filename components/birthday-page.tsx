@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { MinneBoks } from './minne-boks'
 import { BirthdayCake } from './birthday-cake'
-
+import { MusicPlayer } from './music-player'
 
 export function BirthdayPage() {
   const [showMinneBoks, setShowMinneBoks] = useState(false)
@@ -41,6 +41,7 @@ export function BirthdayPage() {
           >
             Minne Boks
           </Button>
+          <MusicPlayer audioSrc="/birthday-song.mp3" />
         </motion.div>
       )}
     </AnimatePresence>

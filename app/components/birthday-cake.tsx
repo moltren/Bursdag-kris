@@ -1,15 +1,14 @@
-'use client'
-
 import React from 'react'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
-export default function BirthdayCake() {
+export function BirthdayCake() {
   return (
-    <DotLottieReact
-      src="https://lottie.host/dcefb5f0-875b-4f02-8c60-eeabe3803812/MCHYB5oIcB.lottie"
-      loop
-      autoplay
-    />
+    <div className="w-full max-w-lg mx-auto">
+      <iframe
+        src="https://lottie.host/?file=ab82e2f9-b34d-4cfc-9d96-e3a21a12f9df/8NXx3WuYGo.json"
+        style={{ width: '100%', height: '300px' }}
+        allowFullScreen
+      />
+    </div>
   )
 }
 
