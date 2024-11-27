@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
-import { MinneBoks } from './minne-boks'
+import { MinneBoks } from '../components/minne-boks'
 import { BirthdayCake } from './birthday-cake'
 
 export function BirthdayPage() {
