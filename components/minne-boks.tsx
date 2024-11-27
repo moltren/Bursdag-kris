@@ -20,31 +20,7 @@ export function MinneBoks({ onBack }: MinneBoksProps) {
   const [loadedMemories, setLoadedMemories] = useState<Memory[]>([]);
 
   useEffect(() => {
-    const loadImages = async () => {
-      const imagePromises = memories.map((memory) => {
-        return new Promise<Memory>((resolve) => {
-          if (typeof window !== 'undefined') {
-            const img = new window.Image();
-            img.src = memory.src;
-            img.crossOrigin = "anonymous";
-            img.onload = () => {
-              resolve(memory);
-            };
-            img.onerror = () => {
-              console.error(`Failed to load image: ${memory.src}`);
-              resolve(memory);
-            };
-          } else {
-            resolve(memory);
-          }
-        });
-      });
-
-      const loadedMemories = await Promise.all(imagePromises);
-      setLoadedMemories(loadedMemories);
-    };
-
-    loadImages();
+    setLoadedMemories(memories);
   }, []);
 
   return (
