@@ -79,4 +79,3 @@ export function MinneBoks({ onBack }: MinneBoksProps) {
     </div>
   )
 }
-
