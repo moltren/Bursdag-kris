@@ -24,7 +24,7 @@ export function MinneBoks({ onBack }: MinneBoksProps) {
       const imagePromises = memories.map((memory) => {
         return new Promise<Memory>((resolve) => {
           if (typeof window !== 'undefined') {
-            const img = new window.Image();
+            const img = new window.Image(0, 0);  // Provide width and height arguments
             img.src = memory.src;
             img.crossOrigin = "anonymous";
             img.onload = () => {
